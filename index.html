@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet"  href="css/all.css"/>
+    <script defer src="js/all.js"></script>
+    <script src="./main.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-tv" >
+		<div class="first">
+			
+			<div class="logo">
+				<img src="image/Logo FITFLIX.png"  />
+			 </div>
+			 <div class="favorite">
+				<div class="btn-fav"><i class="fas fa-star"></i><span class="text-fav">favorite</span></div>
+			</div>
+			<div class="list-channels">
+				
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		<div class="second">
+			<!-- carousel chaine -->
+			<div class="slideshow-container">
+
+				<div class="mySlides fade">
+				  <div class="top-second">
+						<span class="para-title list-span"><i class="fas fa-pause"></i>canal + UHD / FHD / HD (339)</span>
+						<span class="epg">EPG</span>
+				
+					</div>
+				</div>
+				
+				<div class="mySlides fade">
+				 	<div class="top-second">
+						<span class="para-title list-span"><i class="fas fa-pause"></i>canal 2+ UHD / FHD / HD (339)</span>
+						<span class="epg">EPG</span>
+				
+					</div>
+				</div>
+				
+				<div class="mySlides fade">
+				  	<div class="top-second">
+						<span class="para-title list-span"><i class="fas fa-pause"></i>canal 3+ UHD / FHD / HD (339)</span>
+						<span class="epg">EPG</span>
+				
+					</div>
+				</div>
+				
+				<a class="prev" onclick="plusSlides(-1)"><span class="chevron-left"><i class="fas fa-chevron-left"></i> </span></a>
+				<a class="next" onclick="plusSlides(1)"><span class="chevron-right"><i class="fas fa-chevron-right"></i> </span></a>
+				
+				</div>
+		
+		
+		
+		<!--	<div class="top-second">
+				<span class="chevron-left"><i class="fas fa-chevron-left"></i> </span>
+				<span class="para-title list-span"><i class="fas fa-pause"></i>canal + UHD / FHD / HD (339)</span>
+				<span class="epg">EPG</span>
+				<span class="chevron-right"><i class="fas fa-chevron-right"></i> </span>
+				
+			</div>
+			<div class="list-second">
+					<span class="increment">1</span>
+					<span class="logo-channel">
+						<img
+						    src="image/TF1_(2013).svg"
+						    height="60"
+						    width="80" />
+						
+					
+					</span>
+					<span class="title-list"> FR TF1 HD</span>
+					<span class="timeshift"> <img src=""/></span>
+					<span class="play"> <i class="fas fa-play"></i></span>
+				
+			</div>
+			<div class="list-second active">
+					<span class="increment">2</span>
+					<span class="logo-channel"><img src="" /></span>
+					<span class="title-list">  HD</span>
+					<span class="timeshift"> <img src=""/></span>
+					<span class="play"> <i class="fas fa-play"></i></span>
+				https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(4).jpg
+			</div>
+			<div class="list-second">
+					<span class="increment">2</span>
+					<span class="logo-channel"><img
+						    src="image/TF1_(2013).svg"
+						    height="60"
+						    width="80" /></span>
+					<span class="title-list">  HD</span>
+					<span class="timeshift"> <img src=""/></span>
+					<span class="play"> <i class="fas fa-play"></i></span>
+				
+			</div>https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(4).jpg
+			<div class="list-second">
+					<span class="increment">2</span>
+					<span class="logo-channel"><img
+						    src="image/TF1_(2013).svg"
+						    height="60"
+						    width="80" /></span>
+					<span class="title-list">  HD</span>
+					<span class="timeshift"> <img src=""/></span>
+					<span class="play"> <i class="fas fa-play"></i></span>
+				
+			</div>
+			<div class="list-second">
+					<span class="increment">2</span>
+					<span class="logo-channel"><img
+						    src="image/TF1_(2013).svg"
+						    height="60"
+						    width="80" /></span>
+					<span class="title-list">  HD</span>
+					<span class="timeshift"> <img src=""/></span>
+					<span class="play"> <i class="fas fa-play"></i></span>
+				
+			</div> -->
+		</div>
+	</div>
+
+
+
+	
+</body>
+<script type="text/javascript">
+window.onload = function() {
+
+    // add eventListener for keydown
+    document.addEventListener('keydown', function(e) {
+        switch(e.keyCode){
+        case 37: //LEFT arrow
+        	console.log("left");
+        	window.tizen.tvinputdevice.registerKey('ArrowLeft'); 
+        	document.getElementById('btn1').style.display = "none";
+            break;
+        case 38: //UP arrow
+        	console.log("right");
+        	window.tizen.tvinputdevice.registerKey('ArrowUp'); 
+        	break;
+        case 39: //RIGHT arrow
+            break;
+        case 40: //DOWN arrow
+            break;
+        case 13: //OK button
+//          window.open("/page2.html");
+            break;
+        case 10009:
+            tizen.application.getCurrentApplication().exit();
+            break;
+        default:
+            console.log('Key code : ' + e.keyCode);
+            break;
+        }
+    });
+    
+};
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  
+  slides[slideIndex-1].style.display = "block";  
+}
+
+$(document).ready(function(){
+	getPageData();
+})
+//api call 
+function getPageData() {
+	$.ajax({
+    	dataType: "json",
+    	url: "http://my-king.net:7070/player_api.php?username=190606072657203&password=hbycw6fog6&action=get_live_categories",
+    	type:"GET",
+    	success:function(res){
+    		   //console.log('res: ',res);
+	    		if(res){
+	    			var row = '';
+	    			
+	    			for(let i = 0 ; i< res.length ;i++) {
+	    				row = row + "<span class='list-span'><i class='fas fa-pause'></i>" + res[i].category_name + "</span>";
+	    				
+	    				
+						
+	    			}
+	    			if(row != ''){
+	    				$(".list-channels").append(row);
+	    			}
+	    			
+	    			$('.list-span').on('click', function() {
+						  console.log('res by id: ')
+						});	
+	    		}
+	    		
+						$('.list-span').on('click', function() {
+						  console.log('res by id: ', res[i].category_id)
+						});	
+	    			
+	    		
+	    		
+	    		
+	    		
+
+				
+    		}
+	});
+}
+
+
+
+
+function getPageDataById($category_id) {
+	$.ajax({
+    	dataType: "json",
+    	url: "http://my-king.net:7070/player_api.php?username=190606072657203&password=hbycw6fog6&action=get_live_streams&category_id=$category_id",
+    	type:"GET",
+    	success:function(res){
+    		   //console.log('res: ',res);
+	    		if(res){
+	    			var row = '';
+	    			
+	    			for(let i = 0 ; i< res.length ;i++) {
+	    				row = row + "<span class='list-span'><i class='fas fa-pause'></i>" + res[i].category_name + "</span>";
+	    			
+	    			}
+	    			if(row != ''){
+	    				$(".list-channels").append(row);
+	    			}
+	    		}		
+    		}
+	});
+}
+
+
+
+		
+</script>
+</html>
